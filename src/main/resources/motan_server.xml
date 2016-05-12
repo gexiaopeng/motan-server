@@ -4,7 +4,8 @@
     xmlns:motan="http://api.weibo.com/schema/motan"
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
    http://api.weibo.com/schema/motan http://api.weibo.com/schema/motan.xsd">
-   <motan:basicService id="serviceBasicConfig" export="8002" group="motan-demo-rpc" module="motan-demo-rpc" shareChannel="true" />
+     <motan:registry regProtocol="zookeeper" name="my_zookeeper" address="192.168.10.211:2181"/>
+     <motan:basicService id="serviceBasicConfig" registry="my_zookeeper" export="8002" group="motan-demo-rpc" module="motan-demo-rpc" shareChannel="true" />
     <!-- service implemention bean -->
     <bean id="serviceImpl" class="com.gxp.service.impl.FooServiceImpl" />
     <bean id="userService" class="com.gxp.service.impl.UserServiceImpl" />
