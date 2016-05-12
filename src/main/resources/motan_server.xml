@@ -12,5 +12,5 @@
     <!-- exporting service by motan -->
  
     <motan:service interface="com.gxp.service.FooService" ref="serviceImpl" basicService="serviceBasicConfig" />
-     <motan:service interface="com.gxp.service.UserService" ref="userService" basicService="serviceBasicConfig" />
+    <motan:service interface="com.gxp.service.UserService" ref="userService" basicService="serviceBasicConfig" />
 </beans>
